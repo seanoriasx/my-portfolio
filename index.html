@@ -456,44 +456,12 @@
       margin-top: 2rem;
     }
 
-    .certifications-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .cert-tab {
-      background: var(--secondary-black);
-      border: 1px solid var(--border-gray);
-      border-radius: 8px;
-      padding: 0.75rem 1.5rem;
-      color: var(--text-gray);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .cert-tab:hover {
-      background: var(--accent-gray);
-      color: var(--text-white);
-      border-color: var(--accent-blue);
-    }
-
-    .cert-tab.active {
-      background: var(--accent-blue);
-      color: var(--text-white);
-      border-color: var(--accent-blue);
-    }
-
     .certifications-content {
       background: var(--secondary-black);
       border: 1px solid var(--border-gray);
       border-radius: 12px;
       padding: 2rem;
-      min-height: 300px;
+      min-height: 200px;
     }
 
     .certification-item {
@@ -571,14 +539,6 @@
       border-radius: 15px;
       font-size: 0.75rem;
       font-weight: 500;
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
     }
 
     /* Contact Section */
@@ -903,8 +863,8 @@
         <h2>About Me</h2>
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
           <p style="font-size: 1.1rem; color: var(--text-gray); line-height: 1.8;">
-            I'm a passionate IT student at LPU with a strong interest on Cloud Computing/Project Management.
-            I enjoy building scalable solutions and collaborating with teams to deliver innovative IT projects.
+            I'm a passionate IT student at LPU with a strong interest on IT Operations and Cybersecurity.
+            I enjoy learning new technologies and applying them to real-world problems.
             I’m highly motivated to learn, innovate, and create meaningful business impact through technology.
           </p>
         </div>
@@ -983,83 +943,32 @@
       <section id="certifications" class="section">
         <h2>Certifications</h2>
         <div class="certifications-container">
-          <div class="certifications-tabs">
-            <button class="cert-tab active" data-tab="current">Current</button>
-            <button class="cert-tab" data-tab="in-progress">In Progress</button>
-            <button class="cert-tab" data-tab="planned">Planned</button>
-          </div>
-          
           <div class="certifications-content">
-            <!-- Current Certifications -->
-            <div class="tab-content active" id="current">
-              <div class="certification-item">
-                <div class="cert-info">
-                  <i class="fas fa-building cert-icon"></i>
-                  <div class="cert-details">
-                    <h3>SAP Business One</h3>
-                    <p>SAP • 2023</p>
-                  </div>
+            <div class="certification-item">
+              <div class="cert-info">
+                <i class="fas fa-building cert-icon"></i>
+                <div class="cert-details">
+                  <h3>SAP Business One</h3>
+                  <p>SAP • 2023</p>
                 </div>
-                <div class="cert-actions">
-                  <span class="cert-status">Verified</span>
-                  <a href="assets/SAPCertificate.pdf" class="cert-link" download>Download</a>
-                </div>
+              </div>
+              <div class="cert-actions">
+                <span class="cert-status">Verified</span>
+                <a href="assets/SAPCertificate.pdf" class="cert-link" download>Download</a>
               </div>
             </div>
-
-            <!-- In Progress Certifications -->
-            <div class="tab-content" id="in-progress">
-              <div class="certification-item">
-                <div class="cert-info">
-                  <i class="fab fa-aws cert-icon"></i>
-                  <div class="cert-details">
-                    <h3>AWS Cloud Practitioner Essentials</h3>
-                    <p>Amazon Web Services • Expected 2025</p>
-                  </div>
-                </div>
-                <div class="cert-actions">
-                  <span class="cert-status">In Progress</span>
+            <!-- Template for adding new certification -->
+            <div class="certification-item">
+              <div class="cert-info">
+                <i class="fas fa-database cert-icon"></i>
+                <div class="cert-details">
+                  <h3>IT Specialist - Databases</h3>
+                  <p>Certiport • 2024</p>
                 </div>
               </div>
-            </div>
-
-            <!-- Planned Certifications -->
-            <div class="tab-content" id="planned">
-              <div class="certification-item">
-                <div class="cert-info">
-                  <i class="fab fa-aws cert-icon"></i>
-                  <div class="cert-details">
-                    <h3>AWS Certified Cloud Practitioner (Foundational)</h3>
-                    <p>Amazon Web Services • Planned 2026</p>
-                  </div>
-                </div>
-                <div class="cert-actions">
-                  <span class="cert-status">Planned</span>
-                </div>
-              </div>
-              <div class="certification-item">
-                <div class="cert-info">
-                  <i class="fas fa-shield-alt cert-icon"></i>
-                  <div class="cert-details">
-                    <h3>CompTIA Security+</h3>
-                    <p>CompTIA • Planned 2027</p>
-                  </div>
-                </div>
-                <div class="cert-actions">
-                  <span class="cert-status">Planned</span>
-                </div>
-              </div>
-              <div class="certification-item">
-                <div class="cert-info">
-                  <i class="fab fa-aws cert-icon"></i>
-                  <div class="cert-details">
-                    <h3>AWS Certified Solutions Architect – Associate</h3>
-                    <p>Amazon Web Services • Planned 2028</p>
-                  </div>
-                </div>
-                <div class="cert-actions">
-                  <span class="cert-status">Planned</span>
-                </div>
+              <div class="cert-actions">
+                <span class="cert-status">Verified</span>
+                <a href="assets/DatabasesCertificate.pdf" class="cert-link" download>Download</a>
               </div>
             </div>
           </div>
@@ -1238,24 +1147,6 @@
     };
     
     setTimeout(typeWriter, 500);
-
-    // Certifications Tab Functionality
-    const certTabs = document.querySelectorAll('.cert-tab');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    certTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const targetTab = tab.getAttribute('data-tab');
-        
-        // Remove active class from all tabs and contents
-        certTabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        // Add active class to clicked tab and corresponding content
-        tab.classList.add('active');
-        document.getElementById(targetTab).classList.add('active');
-      });
-    });
   </script>
 </body>
 </html>
